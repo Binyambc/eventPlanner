@@ -1,4 +1,4 @@
-import EventCard from "../../../components/tempEventCard/EventCard";
+import EventCard from "../../../components/EventCard/EventCard";
 import "./EventList.css";
 const EventList = ({ eventData }) => {
   return (
