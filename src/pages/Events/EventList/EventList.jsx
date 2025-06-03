@@ -1,5 +1,6 @@
-import EventCard from "../../../components/EventCard/EventCard";
+import EventCard from "../../../components/eventCard/EventCard";
 import "./EventList.css";
+
 const EventList = ({ eventData }) => {
   return (
     <>
