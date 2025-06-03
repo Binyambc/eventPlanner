@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import AddEventForm from './pages/AddEventForm1/AddEventForm1';
+import AddEventForm from './pages/addEventForm/AddEventForm'
 import './App.css'
 
 function App() {
