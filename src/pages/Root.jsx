@@ -1,17 +1,17 @@
-import Header from "../header/Header";
-import Footer from "../footer/Footer";
-import { Outlet} from "react-router-dom";
+import Header from "../components/Header/Header";
+// import Footer from "../components/Footer/Footer";
+import { Outlet } from "react-router-dom";
 
 const Root = () => {
-    return (
-        <>
-            <Header name="Event Planner"/>
-                <main>
-                    <Outlet/>
-                </main>
-            <Footer/>
-        </>
-    )
-}
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      {/* <Footer /> */}
+    </>
+  );
+};
 
 export default Root;

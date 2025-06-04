@@ -1,5 +1,6 @@
-import EventCard from "../../../components/Event/EventCard/EventCard";
+import EventCard from "../../../components/EventCard/EventCard";
 import styles from "./EventList.module.css";
+
 const EventList = ({
   eventData,
   handleInfoChange,
@@ -12,7 +13,6 @@ const EventList = ({
     return (
       <div className={styles.loading}>
         <h1>Loading......</h1>
-        <h2>It might take a little while</h2>
       </div>
     );
   }
