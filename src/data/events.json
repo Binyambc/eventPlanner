@@ -1,102 +1,124 @@
-[
+{
+  "events": [
     {
       "id": 1,
       "title": "Helsinki Tech Forum",
       "category": "Conference",
       "location": "Messukeskus, Messuaukio 1, Helsinki, Finland",
-      "date": "2025-07-10",
-      "time": "09:00",
       "description": "Annual forum on emerging technologies in Northern Europe.",
-      "attendeesExpected": 450
+      "start": "2025-07-10T09:00",
+      "end": "2025-07-10T17:00",
+      "lat": 60.20319,
+      "lng": 24.936613,
+      "isFavorite": false
     },
     {
       "id": 2,
       "title": "Turku Jazz Evening",
       "category": "Concert",
       "location": "Aura Riverside Park, Läntinen Rantakatu 25, Turku, Finland",
-      "date": "2025-07-12",
-      "time": "19:00",
       "description": "Open-air jazz performance by local and international artists.",
-      "attendeesExpected": 200
+      "start": "2025-07-12T19:00",
+      "end": "2025-07-12T22:00",
+      "lat": 60.45,
+      "lng": 22.2667,
+      "isFavorite": false
     },
     {
       "id": 3,
       "title": "AI Ethics and Society",
       "category": "Seminar",
       "location": "Aalto University, Otakaari 24, Espoo, Finland",
-      "date": "2025-07-15",
-      "time": "13:30",
       "description": "Discussions on AI accountability, fairness, and law in the EU.",
-      "attendeesExpected": 180
+      "start": "2025-07-15T13:30",
+      "end": "2025-07-15T17:00",
+      "lat": 60.184,
+      "lng": 24.8301,
+      "isFavorite": false
     },
     {
       "id": 4,
       "title": "Morning Yoga by Lake Saimaa",
       "category": "Wellness",
       "location": "Satamatori Park, Satamatie 2, Lappeenranta, Finland",
-      "date": "2025-07-05",
-      "time": "08:00",
       "description": "Lakeside yoga with peaceful scenery and fresh air.",
-      "attendeesExpected": 70
+      "start": "2025-07-05T08:00",
+      "end": "2025-07-05T09:30",
+      "lat": 61.067952,
+      "lng": 28.183197,
+      "isFavorite": false
     },
     {
       "id": 5,
       "title": "Tampere Food & Farmer Festival",
       "category": "Community",
       "location": "Central Square, Keskustori 1, Tampere, Finland",
-      "date": "2025-07-09",
-      "time": "11:00",
       "description": "Celebrating local farmers, food trucks, and Finnish produce.",
-      "attendeesExpected": 600
+      "start": "2025-07-09T11:00",
+      "end": "2025-07-09T18:00",
+      "lat": 61.4982,
+      "lng": 23.7608,
+      "isFavorite": false
     },
     {
       "id": 6,
       "title": "Oulu Game Night",
       "category": "Recreation",
       "location": "Valve Cultural Centre, Hallituskatu 7, Oulu, Finland",
-      "date": "2025-07-16",
-      "time": "17:30",
       "description": "A cozy night of tabletop and party games at a community center.",
-      "attendeesExpected": 110
+      "start": "2025-07-16T17:30",
+      "end": "2025-07-16T21:00",
+      "lat": 65.014142,
+      "lng": 25.470536,
+      "isFavorite": false
     },
     {
       "id": 7,
       "title": "Street Art Tour in Kallio",
       "category": "Art",
       "location": "Kallio Library, Viides linja 11, Helsinki, Finland",
-      "date": "2025-07-08",
-      "time": "14:00",
       "description": "Explore Helsinki’s urban art scene with a guided walk.",
-      "attendeesExpected": 95
+      "start": "2025-07-08T14:00",
+      "end": "2025-07-08T16:00",
+      "lat": 60.183592,
+      "lng": 24.953634,
+      "isFavorite": false
     },
     {
       "id": 8,
       "title": "Indie Film Showcase",
       "category": "Film",
       "location": "Aalto-Sali, Väinönkatu 7, Jyväskylä, Finland",
-      "date": "2025-07-11",
-      "time": "19:00",
       "description": "Screening and discussion of new Finnish indie films.",
-      "attendeesExpected": 230
+      "start": "2025-07-11T19:00",
+      "end": "2025-07-11T22:00",
+      "lat": 62.2415,
+      "lng": 25.7209,
+      "isFavorite": false
     },
     {
       "id": 9,
       "title": "Startup Pitch Helsinki",
       "category": "Business",
       "location": "Maria 01 Campus, Lapinlahdenkatu 16, Helsinki, Finland",
-      "date": "2025-07-14",
-      "time": "18:00",
       "description": "Local startups pitch to Finnish investors and accelerators.",
-      "attendeesExpected": 350
+      "start": "2025-07-14T18:00",
+      "end": "2025-07-14T20:00",
+      "lat": 60.1686,
+      "lng": 24.9221,
+      "isFavorite": false
     },
     {
       "id": 10,
       "title": "Kids Science Expo",
       "category": "Education",
       "location": "Kuopio Museum, Kauppakatu 23, Kuopio, Finland",
-      "date": "2025-07-13",
-      "time": "12:00",
       "description": "Interactive science event for kids with exhibits and workshops.",
-      "attendeesExpected": 400
+      "start": "2025-07-13T12:00",
+      "end": "2025-07-13T16:00",
+      "lat": 62.8924,
+      "lng": 27.677,
+      "isFavorite": false
     }
   ]
+}
