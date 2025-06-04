@@ -90,6 +90,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     value={formData.title}
                     onChange={handleChange}
                     name="title"
+                    className={styles.inputField}
                     required 
                     />
                     <label className={styles.label} htmlFor="category" >Category</label>
@@ -97,7 +98,8 @@ const AddEventForm = ({ onAddEvent }) => {
                     placeholder="Category"
                     value={formData.category}
                     onChange={handleChange}
-                    name="category"                   
+                    name="category"
+                    className={styles.inputField}                   
                     required 
                     />
                     <label className={styles.label} htmlFor="location" >Location</label>
@@ -106,6 +108,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     value={formData.location}
                     onChange={handleChange}
                     name="location"
+                    className={styles.inputField}
                     required 
                     />
                     <label className={styles.label} htmlFor="start" >Start time</label>
@@ -115,6 +118,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     onChange={handleChange}
                     name="start"
                     min={nowMin}
+                    className={styles.inputField}
                     required 
                     />
                     <label className={styles.label} htmlFor="end" >End time</label>
@@ -124,16 +128,18 @@ const AddEventForm = ({ onAddEvent }) => {
                     onChange={handleChange}
                     name="end"
                     min={nowMin}
+                    className={styles.inputField}
                     required 
                     />
                     <label className={styles.label} htmlFor="description" >Description</label>
-                    <input type="text"
+                    <textarea type="text"
                     placeholder="Description"
                     value={formData.description}
                     onChange={handleChange}
                     name="description"
+                    className={styles.textArea}
                     required 
-                    />
+                    ></textarea>
                     <button type="submit" className={styles.submitBtn}>Add Event</button>
             </form>
             </div>
