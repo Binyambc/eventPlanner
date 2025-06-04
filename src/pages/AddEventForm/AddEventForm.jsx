@@ -1,9 +1,11 @@
 import { useState } from "react";
 // import { useNavigate } from "react-router";
-
+import { getCoordinates, getNowDateTimeLocal } from "../../utils";
+import styles from "./AddEventForm.module.css";
 
 const AddEventForm = ({ onAddEvent }) => {
     const [formData, setFormData] = useState({
+        id: Date.now(),
         title: "",
         category: "",
         location: "",
@@ -15,18 +17,46 @@ const AddEventForm = ({ onAddEvent }) => {
     // const navigate = useNavigate();
 
     const handleChange = (e) => {
-        const { title, value } = e.target;
-        setFormData((prev) => ({...prev, [title]: value}));
+        const { name, value } = e.target;
+        setFormData((prev) => ({...prev, [name]: value}));
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const eventData = {
-            ...formData,
-            location: formData.location
-        };
+    // const getNowDateTimeLocal = () => {
+    //     const now = new Date();
+    //     return new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+    //         .toISOString()
+    //         .slice(0, 16);
+    // };
+    const nowMin = getNowDateTimeLocal();
 
-        const newEvent = { ...formData};
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const coordinates = await getCoordinates(formData.location);
+
+        if (!coordinates) {
+            alert("Could not get location coordinates.");
+            return;
+        }
+
+        const now  = new Date();
+        const startDate = new Date(formData.start);
+        const endDate = new Date(formData.end);
+
+        if (startDate < now || endDate < now) {
+            alert("Start and end time must be in the future.");
+            return;
+        }
+
+        if (endDate <= startDate) {
+            alert("End time must be after start time.");
+            return;
+        }
+
+        const newEvent = { ...formData,
+            latitude: coordinates.latitude,
+            longitude: coordinates.longitude,
+        };
 
         axios
         .post("http://localhost:3006/events", newEvent)
@@ -34,6 +64,7 @@ const AddEventForm = ({ onAddEvent }) => {
             onAddEvent(res.data);
             // navigate("/events");
             setFormData({
+                id: Date.now(),
                 title: "",
                 category: "",
                 location: "",
@@ -49,9 +80,11 @@ const AddEventForm = ({ onAddEvent }) => {
 
     return (
         <>
-            <h1>Add new Event</h1>
+        <div className={styles.formWrapper}>
+            <h1 className={styles.heading}>Add new Event</h1>
             <form onSubmit={handleSubmit}
-                className="event_form">
+                className={styles.eventForm}>
+                    <label className={styles.label} htmlFor="title" >Title</label>
                     <input type="text"
                     placeholder="Event title"
                     value={formData.title}
@@ -59,13 +92,15 @@ const AddEventForm = ({ onAddEvent }) => {
                     name="title"
                     required 
                     />
+                    <label className={styles.label} htmlFor="category" >Category</label>
                     <input type="text"
                     placeholder="Category"
                     value={formData.category}
                     onChange={handleChange}
-                    name="category"
+                    name="category"                   
                     required 
                     />
+                    <label className={styles.label} htmlFor="location" >Location</label>
                     <input type="text"
                     placeholder="Location"
                     value={formData.location}
@@ -73,30 +108,37 @@ const AddEventForm = ({ onAddEvent }) => {
                     name="location"
                     required 
                     />
+                    <label className={styles.label} htmlFor="start" >Start time</label>
                     <input type="datetime-local"
                     placeholder="Start time"
                     value={formData.start}
                     onChange={handleChange}
                     name="start"
+                    min={nowMin}
                     required 
                     />
+                    <label className={styles.label} htmlFor="end" >End time</label>
                     <input type="datetime-local"
                     placeholder="End time"
                     value={formData.end}
                     onChange={handleChange}
                     name="end"
+                    min={nowMin}
                     required 
                     />
-                    <input type="description"
+                    <label className={styles.label} htmlFor="description" >Description</label>
+                    <input type="text"
                     placeholder="Description"
                     value={formData.description}
                     onChange={handleChange}
                     name="description"
                     required 
                     />
-                    <button type="submit" className="submit_btn">Add Event</button>
+                    <button type="submit" className={styles.submitBtn}>Add Event</button>
             </form>
+            </div>
         </>
+    
     );
 };
 
