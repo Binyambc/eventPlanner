@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { time } from "../../data/reusable";
+import { localTime, time } from "../../data/reusable";
 import styles from "./EventCard.module.css";
 import { Link } from "react-router";
 import _ from "lodash";
@@ -74,6 +74,7 @@ const EventCard = ({
               name="start"
               value={newInfo.start}
               onChange={handleChange}
+              min={localTime()}
             />
           </div>
 
@@ -84,6 +85,7 @@ const EventCard = ({
               name="end"
               value={newInfo.end}
               onChange={handleChange}
+              min={newInfo.start ? newInfo.start : localTime()}
             />
           </div>
 

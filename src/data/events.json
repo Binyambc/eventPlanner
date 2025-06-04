@@ -2,12 +2,12 @@
   "events": [
     {
       "id": "1",
-      "title": "Helsinki Tech Forumafsdf",
+      "title": "Helsinki Tech Forum",
       "category": "Conference",
       "location": "Messukeskus, Messuaukio 1, Helsinki, Finland",
       "description": "Annual forum on emerging technologies in Northern Europe.",
       "start": "2025-07-10T09:00",
-      "end": "2025-07-10T17:00",
+      "end": "2025-07-18T17:00",
       "lat": 60.20319,
       "lng": 24.936613,
       "isFavorite": false
@@ -18,7 +18,7 @@
       "category": "Concert",
       "location": "Aura Riverside Park, Läntinen Rantakatu 25, Turku, Finland",
       "description": "Open-air jazz performance by local and international artists.",
-      "start": "2025-07-12T19:00",
+      "start": "2025-06-02T19:00",
       "end": "2025-07-12T22:00",
       "lat": 60.45,
       "lng": 22.2667,
