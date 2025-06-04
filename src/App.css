@@ -3,6 +3,11 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: rgb(226, 162, 23);
+}
+.page-container {
+  max-height: 100vh;
+  overflow: auto;
 }
 
 .logo {
@@ -39,4 +44,9 @@
 
 .read-the-docs {
   color: #888;
+}
+.app-container {
+  background-color: #ced80a;
+  min-height: 100vh;
+  padding: 20px;
 }

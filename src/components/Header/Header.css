@@ -1,0 +1,37 @@
+header {
+  background-color: #be945a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: rgb(33, 56, 2);
+}
+
+.active {
+  color: rgb(149, 86, 14);
+  border-bottom: 1px dashed rgb(33, 39, 43);
+  font-weight: 600;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+}
