@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { time } from "../../../data/reusable";
+import { time } from "../../data/reusable";
 import styles from "./EventCard.module.css";
 import { Link } from "react-router";
 import _ from "lodash";
-
 
 const EventCard = ({
   id,
