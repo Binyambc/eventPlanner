@@ -6,6 +6,7 @@ import EventList from "./pages/Events/EventList/EventList";
 import About from "./pages/About/About";
 import "./App.css";
 import useAxios from "./hooks/useAxios";
+import EventDetail from "./pages/EventDetail/EventDetail";
 
 function App() {
   const [eventData, setEventData] = useState([]);
@@ -55,6 +56,7 @@ function App() {
                 />
               }
             />
+            <Route path="/events/:id" element={<EventDetail/>}/>
             <Route
               path="/add-event"
               element={<AddEventForm onAddEvent={addEventHandler} />}

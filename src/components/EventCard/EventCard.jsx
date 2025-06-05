@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { localTime, time } from "../../data/reusable";
 import styles from "./EventCard.module.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import _ from "lodash";
 
 const EventCard = ({
@@ -137,7 +137,7 @@ const EventCard = ({
             <p>{location}</p>
           </div>
           <div className={styles.eventCardFooter}>
-            <Link to={`/${id}`} className={styles.button}>
+            <Link to={`/events/${id}`} className={styles.button}>
               See more
             </Link>
             <button onClick={() => setEditing(true)} className={styles.button}>

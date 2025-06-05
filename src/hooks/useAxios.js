@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+
 const useAxios = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

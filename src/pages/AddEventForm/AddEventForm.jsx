@@ -1,5 +1,6 @@
+import axios from "axios";
 import { useState } from "react";
-// import { useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { getCoordinates, getNowDateTimeLocal } from "../../utils";
 import styles from "./AddEventForm.module.css";
 
@@ -14,7 +15,7 @@ const AddEventForm = ({ onAddEvent }) => {
         description: "",
     })
 
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -62,7 +63,7 @@ const AddEventForm = ({ onAddEvent }) => {
         .post("http://localhost:3006/events", newEvent)
         .then((res) => {
             onAddEvent(res.data);
-            // navigate("/events");
+            navigate("/events");
             setFormData({
                 id: Date.now(),
                 title: "",
