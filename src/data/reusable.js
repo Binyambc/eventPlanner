@@ -14,3 +14,9 @@ export const time = (startDate, endDate) => {
       )},  ${format(end, "HH:mm")}`;
   return timeRange;
 };
+export const localTime = () => {
+  const now = new Date();
+  const difToUTC = now.getTimezoneOffset();
+  const local = now.getTime() - difToUTC * 60 * 1000;
+  return new Date(local).toISOString().slice(0, 16);
+};
