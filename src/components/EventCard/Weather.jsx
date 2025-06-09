@@ -13,7 +13,6 @@ const Weather = ({ geo }) => {
       const fetchWeather = async () => {
         const weatherData = await get(apiUrl);
         setWeather(weatherData);
-        // console.log(weatherData);
       };
       fetchWeather();
     }
