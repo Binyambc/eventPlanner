@@ -7,9 +7,9 @@
       "location": "Pekankatu 5A,helsinki",
       "description": "Annual forum on emerging technologies in Northern Europe.",
       "start": "2025-07-10T09:00",
-      "end": "2025-07-18T17:00",
-      "lat": "60.2515854",
-      "lng": "25.0148535",
+      "end": "2025-07-10T17:00",
+      "lat": 60.20319,
+      "lng": 24.936613,
       "isFavorite": false
     },
     {
@@ -119,6 +119,17 @@
       "lat": 62.8924,
       "lng": 27.677,
       "isFavorite": false
+    },
+    {
+      "id": 1749078491913,
+      "title": "Picnic",
+      "category": "Leisure",
+      "location": "Suvannontie 20, Helsinki, Finland",
+      "start": "2025-06-05T17:00",
+      "end": "2025-06-05T23:00",
+      "description": "ererrer",
+      "latitude": 60.1938285,
+      "longitude": 24.9591511
     }
   ]
 }
