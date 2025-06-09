@@ -41,13 +41,14 @@ export const geoConvert = async (location) => {
 };
 
 export const categoryColors = {
-  food: "#EF4444",
-  technology: "#0EA5E9",
-  wellness: "#10B981",
-  market: "#F59E0B",
-  music: "#8B5CF6",
-  nature: "#166534",
+  conference: "#EF4444",
+  concert: "#0EA5E9",
+  seminar: "#10B981",
+  leisure: "#10B981",
+  community: "#F59E0B",
+  creation: "#8B5CF6",
+  film: "#166534",
   art: "#EC4899",
   wellness: "#6366F1",
-  games: "#F97316",
+  business: "#F97316",
 };
