@@ -36,8 +36,6 @@
     background-color: #fff;
     transition: border-color 0.2s ease;
   }
-  
-  .inputField,
 
   .inputField:focus,
   .textArea:focus {

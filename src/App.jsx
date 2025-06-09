@@ -1,25 +1,40 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router";
-import AddEventForm from "./pages/AddEventForm/AddEventForm";
-import Root from "./pages/Root";
-import EventList from "./pages/Events/EventList/EventList";
-import About from "./pages/About/About";
 import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router";
+import Root from "./pages/Root";
+import About from "./pages/About/About";
+import EventList from "./pages/EventList/EventList";
+import EventCalendar from "./pages/Calendar/Calendar";
 import useAxios from "./hooks/useAxios";
+import MapAll from "./pages/Map/MapAll";
+import AddEventForm from "./pages/AddEventForm/AddEventForm";
 
 function App() {
   const [eventData, setEventData] = useState([]);
-  const eventApi = "http://localhost:3006/events";
+  const [categories, setCategories] = useState([]);
   const { get, patch, loading, error } = useAxios();
   const { remove, error: deleteError } = useAxios();
+  const [message, setMessage] = useState("");
+
+  const handleMessage = (msg) => {
+    setMessage(msg);
+    setTimeout(() => setMessage(""), 2000);
+  };
+
+  const eventApi = "http://localhost:3006/events";
 
   useEffect(() => {
     const fetchData = async () => {
       let data = await get(eventApi);
+      setCategories([...new Set(data.map((e) => e.category))]);
       setEventData(data);
     };
     fetchData();
   }, []);
+
+  const addEventHandler = (newEvent) => {
+    setEventData((prev) => [...prev, newEvent]);
+  };
 
   const handleInfoChange = async (id, newInfo) => {
     const updatedInfo = await patch(eventApi, id, newInfo);
@@ -32,33 +47,65 @@ function App() {
     await remove(eventApi, id);
     setEventData((prev) => prev.filter((event) => event.id !== id));
   };
+  const toggleFavorite = async (id) => {
+    const event = eventData.find((e) => e.id === id);
+    const updatedFavorite = { ...event, isFavorite: !event.isFavorite };
+    const updatedEvent = await patch(eventApi, id, updatedFavorite);
+    setEventData((prev) =>
+      prev.map((event) => (event.id === id ? updatedEvent : event))
+    );
+  };
 
-  const addEventHandler = (newEvent) => {
-    setEventData((prevData) => [...prevData, newEvent]);
+  const onAddCat = (newCat) => {
+    if (!categories.includes(newCat)) {
+      setCategories((prev) => [...prev, newCat]);
+    }
   };
   return (
     <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>
-            <Route path="/about" element={<About />} />
             <Route
               index
               element={
                 <EventList
                   eventData={eventData}
-                  handleInfoChange={handleInfoChange}
+                  categories={categories}
                   error={error}
                   loading={loading}
+                  handleInfoChange={handleInfoChange}
                   deleteEvent={deleteEvent}
                   deleteError={deleteError}
+                  toggleFavorite={toggleFavorite}
+                  onAddCat={onAddCat}
+                  message={message}
+                  handleMessage={handleMessage}
                 />
               }
             />
+
             <Route
               path="/add-event"
               element={<AddEventForm onAddEvent={addEventHandler} />}
             />
+            <Route
+              path="/calendar"
+              element={
+                <EventCalendar
+                  eventData={eventData}
+                  handleInfoChange={handleInfoChange}
+                  deleteEvent={deleteEvent}
+                  deleteError={deleteError}
+                  toggleFavorite={toggleFavorite}
+                  handleMessage={handleMessage}
+                  onAddCat={onAddCat}
+                  categories={categories}
+                />
+              }
+            />
+            <Route path="/map" element={<MapAll eventData={eventData} />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
       </BrowserRouter>
