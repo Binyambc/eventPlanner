@@ -12,6 +12,7 @@ const AddEventForm = ({ onAddEvent }) => {
         location: "",
         start: "",
         end: "",
+        image: "",
         description: "",
     })
 
@@ -29,6 +30,18 @@ const AddEventForm = ({ onAddEvent }) => {
     //         .slice(0, 16);
     // };
     const nowMin = getNowDateTimeLocal();
+
+    const newImage = (
+        <img 
+        src={formData.image || "/images/placeHolder.webp"}
+        alt="Event preview"
+        className={styles.previewImage}
+        onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "/images/placeHolder.webp";
+        }}
+        />
+    )
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -71,6 +84,7 @@ const AddEventForm = ({ onAddEvent }) => {
                 location: "",
                 start: "",
                 end: "",
+                image: "",
                 description: "",
             })
         })
@@ -131,6 +145,14 @@ const AddEventForm = ({ onAddEvent }) => {
                     min={nowMin}
                     className={styles.inputField}
                     required 
+                    />
+                    <label className={styles.label} htmlFor="image" >Image URL</label>
+                    <input type="text"
+                    placeholder="Paste image URL"
+                    value={formData.image}
+                    onChange={handleChange}
+                    name="image"
+                    className={styles.inputField}
                     />
                     <label className={styles.label} htmlFor="description" >Description</label>
                     <textarea type="text"

@@ -61,7 +61,7 @@
       "end": "2025-07-09t18:00",
       "lat": 61.4982,
       "lng": 23.7608,
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": "6",
@@ -73,7 +73,7 @@
       "end": "2025-07-16t21:00",
       "lat": 65.014142,
       "lng": 25.470536,
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": "7",
@@ -85,7 +85,7 @@
       "end": "2025-07-08t16:00",
       "lat": 60.183592,
       "lng": 24.953634,
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "id": "8",
@@ -134,6 +134,42 @@
       "lat": "60.1938285",
       "lng": "24.9591511",
       "isFavorite": false
+    },
+    {
+      "id": 1749543224352,
+      "title": "Friendly Football",
+      "category": "Sports",
+      "location": "Mäkelänkatu 70, Helsinki, Finland",
+      "start": "2025-06-14T15:00",
+      "end": "2025-06-14T17:00",
+      "image": "",
+      "description": "Blue team vs Red team",
+      "latitude": 60.2028129,
+      "longitude": 24.9440035
+    },
+    {
+      "id": 1749543517083,
+      "title": "Friendly Football",
+      "category": "Sports",
+      "location": "Mäkelänkatu 70, Helsinki, Finland",
+      "start": "2025-06-14T15:00",
+      "end": "2025-06-14T17:00",
+      "image": "",
+      "description": "Blue team vs Red team",
+      "latitude": 60.2028129,
+      "longitude": 24.9440035
+    },
+    {
+      "id": 1749544303875,
+      "title": "Friendly Football",
+      "category": "Sports",
+      "location": "Mäkelänkatu 70, Helsinki, Finland",
+      "start": "2025-06-14T16:00",
+      "end": "2025-06-14T18:00",
+      "image": "",
+      "description": "Yellow team vs Green team",
+      "latitude": 60.2028129,
+      "longitude": 24.9440035
     }
   ]
 }
