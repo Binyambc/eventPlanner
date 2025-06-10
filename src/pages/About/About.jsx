@@ -1,11 +1,11 @@
-import "./About.css";
+import styles from "./About.module.css";
 
 const About = () => {
     return (
-        <div className="about-page">
+        <div className={styles.aboutPage}>
             <h1>About Event Planner</h1>
 
-            <section className="about-section">
+            <section className={styles.aboutSection}>
                 <h2>What is Event Planner?</h2>
                 <p>
                     Event Planner is a modern web application designed to help users organize and manage their events efficiently.
@@ -14,7 +14,7 @@ const About = () => {
                 </p>
             </section>
 
-            <section className="about-section">
+            <section className={styles.aboutSection}>
                 <h2>Key Features</h2>
                 <ul>
                     <li>📅 Interactive Calendar View - Visualize all your events in a monthly calendar format</li>
@@ -25,7 +25,7 @@ const About = () => {
                 </ul>
             </section>
 
-            <section className="about-section">
+            <section className={styles.aboutSection}>
                 <h2>How to Use</h2>
                 <ol>
                     <li>Navigate to the Calendar or List view to see your events</li>
@@ -36,21 +36,20 @@ const About = () => {
                 </ol>
             </section>
 
-            <section className="about-section">
+            <section className={styles.aboutSection}>
                 <h2>Our Team</h2>
-                <div className="team-members">
-                    <div className="team-member">
+                <div className={styles.teamMembers}>
+                    <div className={styles.teamMember}>
                         <h3>Developers</h3>
                         <p>Binyam</p>
                         <p>Hoa</p>
                         <p>Abdul</p>
                         <p>Makar</p>
                     </div>
-                    {/* Add more team members as needed */}
                 </div>
             </section>
 
-            <section className="about-section">
+            <section className={styles.aboutSection}>
                 <h2>Contact</h2>
                 <p>
                     Have questions or suggestions? We'd love to hear from you!

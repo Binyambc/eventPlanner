@@ -7,8 +7,14 @@ const Weather = ({ geo }) => {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${geo[0]}&lon=${geo[1]}&appid=${apiKey}`;
   const { get, loading } = useAxios();
+  
+  console.log("API KEY:", import.meta.env.VITE_WEATHER_API_KEY);
 
   useEffect(() => {
+    if (!apiKey) {
+      console.error("Weather API key is missing.");
+      return;
+    }
     if (geo.length === 2) {
       const fetchWeather = async () => {
         const weatherData = await get(apiUrl);
