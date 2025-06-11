@@ -23,8 +23,6 @@ function App() {
 
   const eventApi = "https://eventplannerbackend-xrkp.onrender.com/events";
 
-  const [isDark, setIsDark] = useState("false");
-
   useEffect(() => {
     const fetchData = async () => {
       let data = await get(eventApi);
@@ -33,10 +31,6 @@ function App() {
     };
     fetchData();
   }, []);
-
-  useEffect(() => {
-    document.body.classList.toggle("dark", isDark);
-  }, [isDark]);
 
   const addEventHandler = (newEvent) => {
     setEventData((prev) => [...prev, newEvent]);
@@ -70,7 +64,6 @@ function App() {
   
   return (
     <>
-      <button onClick={() => setIsDark((prev) => !prev)}>Switch to {isDark ? "Light" : "Dark"} Mode </button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>

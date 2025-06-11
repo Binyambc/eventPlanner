@@ -45,40 +45,60 @@ const EventList = ({
 
   return (
     <>
-      {message && <p className={styles.success}>{message}</p>}
-      <div className={styles.filterContainer}>
-        <input
-          className={styles.search}
-          type="text"
-          placeholder="🔍 Search....."
-          value={searchValue}
-          onChange={searchHandle}
-        />
-        <div className={styles.select}>
-          <select
-            value={catFilter}
-            className={styles.catFilter}
-            onChange={(e) => setCatFilter(e.target.value)}
-          >
-            <option value="all categories">all categories</option>
-            {categories.map((c, index) => (
-              <option key={index} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
+      <section className={styles.heroSection}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className={styles.heroVideo}
+        >
+          <source src="/videos/yard.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.videoOverlay}></div>
 
-          <div className={styles.favFilter}>
-            <input
-              type="checkbox"
-              id="favorite"
-              checked={favFilter}
-              onChange={() => setFavFilter((prev) => !prev)}
-            />
-            <label htmlFor="favorites"> Favorites</label>
+        <div className={`${styles.overlayContent}`}>
+          <div className={styles.overlayBackground}>
+            <h1>Discover Events</h1>
+
+            {message && <p className={styles.success}>{message}</p>}
+
+            <div className={styles.filterContainer}>
+              <input
+                className={styles.search}
+                type="text"
+                placeholder="🔍 Search..."
+                value={searchValue}
+                onChange={searchHandle}
+              />
+
+              <select
+                value={catFilter}
+                className={styles.catFilter}
+                onChange={(e) => setCatFilter(e.target.value)}
+              >
+                <option value="all categories">all categories</option>
+                {categories.map((c, index) => (
+                  <option key={index} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+
+              <div className={styles.favFilter}>
+                <input
+                  type="checkbox"
+                  id="favorite"
+                  checked={favFilter}
+                  onChange={() => setFavFilter((prev) => !prev)}
+                />
+                <label htmlFor="favorite">Favorites</label>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <h1>EventList</h1>
       <div className={styles.listContainer}>

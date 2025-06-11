@@ -100,9 +100,9 @@ const AddEventForm = ({ onAddEvent }) => {
 
     return (
         <>
-        <div className={styles.formWrapper}>
-            <h1 className={styles.heading}>Add new Event</h1>
-            <form onSubmit={handleSubmit}
+            <div className={styles.formWrapper}>
+                <h1 className={styles.heading}>Add new Event</h1>
+                <form onSubmit={handleSubmit}
                 className={styles.eventForm}>
                     <label className={styles.label} htmlFor="category" >Category</label>
                     <CategorySelect type="text"
@@ -171,7 +171,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     required 
                     ></textarea>
                     <button type="submit" className={styles.submitBtn}>Add Event</button>
-            </form>
+                </form>
             </div>
         </>
     
