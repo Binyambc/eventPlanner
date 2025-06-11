@@ -21,7 +21,7 @@ function App() {
     setTimeout(() => setMessage(""), 2000);
   };
 
-  const eventApi = "https://eventplannerbackend-xrkp.onrender.com";
+  const eventApi = "https://eventplannerbackend-xrkp.onrender.com/events";
 
   const [isDark, setIsDark] = useState("false");
 
