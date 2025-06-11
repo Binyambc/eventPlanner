@@ -8,7 +8,6 @@ import enUS from "date-fns/locale/en-US";
 
 import EventCard from "../../components/EventCard/EventCard";
 import styles from "./Calendar.module.css";
-import { categoryColors } from "../../data/reusable";
 import { useEffect, useState } from "react";
 
 const locales = {
@@ -25,32 +24,26 @@ const localizer = dateFnsLocalizer({
 
 const EventCalendar = ({
   eventData,
+  categories,
   handleInfoChange,
   deleteEvent,
   deleteError,
   toggleFavorite,
-  onAddCat,
-  categories,
   handleMessage,
+  onAddCat,
 }) => {
   const [date, setDate] = useState(new Date());
   const [view, setView] = useState("month");
-
   const [sameDayEvents, setSameDayEvents] = useState([]);
 
-  const convertedEvents = eventData.map((event) => ({
-    ...event,
-    start: new Date(event.start),
-    end: new Date(event.end),
-  }));
   useEffect(() => {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const tomorrow = new Date(today);
     tomorrow.setDate(today.getDate() + 1);
 
-    const todayEvents = convertedEvents.filter(
-      (event) => event.start < tomorrow && event.end >= today
+    const todayEvents = eventData.filter(
+      (event) => new Date(event.start) < tomorrow && new Date(event.end) > today
     );
     setSameDayEvents(todayEvents);
   }, [eventData]);
@@ -58,18 +51,26 @@ const EventCalendar = ({
   const dayClickHandler = (slotInfo) => {
     const slotStart = slotInfo.start;
     const slotEnd = slotInfo.end;
-    const matchEvents = convertedEvents.filter(
-      (event) => event.start <= slotEnd && event.end >= slotStart
+
+    const matchEvents = eventData.filter(
+      (event) =>
+        new Date(event.start) < slotEnd && new Date(event.end) > slotStart
     );
     setSameDayEvents(matchEvents);
   };
   const eventClickHandler = (event) => {
     setSameDayEvents([event]);
   };
+  const convertedEvents = eventData.map((event) => ({
+    ...event,
+    start: new Date(event.start),
+    end: new Date(event.end),
+  }));
   const eventPropGetter = (event) => {
     return {
       style: {
-        backgroundColor: categoryColors[event.category] || "#0EA5E9",
+        backgroundColor: `${event.color}80`,
+        color: "var(--text-color)",
       },
     };
   };
@@ -93,24 +94,22 @@ const EventCalendar = ({
         onSelectEvent={eventClickHandler}
         eventPropGetter={eventPropGetter}
       />
-      {sameDayEvents.length > 0 ? (
+      {sameDayEvents.length > 0 && (
         <div className={styles.eventList}>
           {sameDayEvents.map((event) => (
             <EventCard
               key={event.id}
               {...event}
+              categories={categories}
               handleInfoChange={handleInfoChange}
               deleteEvent={deleteEvent}
               deleteError={deleteError}
               toggleFavorite={toggleFavorite}
               handleMessage={handleMessage}
               onAddCat={onAddCat}
-              categories={categories}
             />
           ))}
         </div>
-      ) : (
-        <p>No events at this time</p>
       )}
     </div>
   );
