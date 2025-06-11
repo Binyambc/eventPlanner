@@ -32,8 +32,6 @@ const AddEventForm = ({ onAddEvent }) => {
     // };
     const nowMin = getNowDateTimeLocal();
 
-    const [category, setCategory] = useState("");
-
     const newImage = (
         <img 
         src={formData.image || "/images/placeHolder.webp"}
@@ -110,7 +108,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     <CategorySelect type="text"
                     placeholder="Category"
                     value={formData.category}
-                    onChange={setCategory}
+                    onChange={(cat) => setFormData((prev) => ({...prev, category: cat }))}
                     name="category"
                     id="category"
                     className={styles.inputField}                   

@@ -43,7 +43,7 @@ const CategorySelect = ({ value, onChange, ...props }) => {
     onChange(custom);
   };
 
-  const isOther = value && !categories.includes(value);
+  const isCustom = value === "" || (value && !categories.includes(value));
 
   return (
     <div>
@@ -52,7 +52,7 @@ const CategorySelect = ({ value, onChange, ...props }) => {
         id="category" 
         className={styles.category} 
         onChange={handleSelectChange} 
-        value={isOther ? "Other" : value || ""}
+        value={isCustom ? "Other" : value || ""}
         {...props}
         >
         <option value="" disabled>-- Select Category --</option>
@@ -63,14 +63,14 @@ const CategorySelect = ({ value, onChange, ...props }) => {
         ))}
       </select>
 
-      {isOther && (
+      {isCustom && (
         <input
           type="text"
           placeholder="Enter custom category"
           value={customCategory}
           onChange={handleCustomChange}
           className={styles.inputField}
-          {...props}
+          name={name}
           required
         />
       )}

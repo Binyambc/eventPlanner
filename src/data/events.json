@@ -161,6 +161,19 @@
       "lat": "60.3361069",
       "lng": "24.9270404",
       "isFavorite": false
+    },
+    {
+      "id": "1749626616445",
+      "title": "Cheese making",
+      "category": "Farming",
+      "location": "Malminkaari 24, Helsinki, Finland",
+      "start": "2025-06-14T07:00",
+      "end": "2025-06-14T10:20",
+      "image": "https://finlandforkids.com/listing/fallkulla-domestic-animal-farm/",
+      "description": "A day at the animal farm",
+      "lat": "60.2573175",
+      "lng": "25.0340346",
+      "isFavorite": false
     }
   ]
 }
