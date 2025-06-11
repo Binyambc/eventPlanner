@@ -21,8 +21,8 @@ function App() {
     setTimeout(() => setMessage(""), 2000);
   };
 
-  // const eventApi = "https://eventplannerbackend-xrkp.onrender.com/events";
-  const eventApi = "http://localhost:3006/events";
+  const eventApi = "https://eventplannerbackend-xrkp.onrender.com/events";
+  // const eventApi = "http://localhost:3006/events";
 
   useEffect(() => {
     const fetchData = async () => {
