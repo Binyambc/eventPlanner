@@ -169,10 +169,36 @@
       "location": "Malminkaari 24, Helsinki, Finland",
       "start": "2025-06-14T07:00",
       "end": "2025-06-14T10:20",
-      "image": "https://finlandforkids.com/listing/fallkulla-domestic-animal-farm/",
+      "image": "https://bowcockcuerden.co.uk/wp-content/uploads/2017/11/cow_in_field-1024x683-1024x585.jpg",
       "description": "A day at the animal farm",
       "lat": "60.2573175",
       "lng": "25.0340346",
+      "isFavorite": false
+    },
+    {
+      "id": "1749630085336",
+      "title": "Spa",
+      "category": "Wellness",
+      "location": "Itäinen Brahenkatu 13, 00510 Helsinki",
+      "start": "2025-06-13T17:30",
+      "end": "2025-06-13T18:30",
+      "image": "",
+      "description": "Salt water floating tab",
+      "lat": "60.1898353",
+      "lng": "24.9496429",
+      "isFavorite": false
+    },
+    {
+      "id": "1749630216803",
+      "title": "Movie",
+      "category": "Film",
+      "location": "sydney, Helsinki",
+      "start": "2025-06-11T19:30",
+      "end": "2025-06-11T21:30",
+      "image": "https://media.finnkino.fi/Files/responsive/TietoaFinnkinosta_Imax_1920x810.jpg",
+      "description": "Movie night",
+      "lat": "60.20787",
+      "lng": "24.99935",
       "isFavorite": false
     }
   ]

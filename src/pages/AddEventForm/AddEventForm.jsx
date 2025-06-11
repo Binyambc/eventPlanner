@@ -81,7 +81,7 @@ const AddEventForm = ({ onAddEvent }) => {
         .post("http://localhost:3006/events", newEvent)
         .then((res) => {
             onAddEvent(res.data);
-            navigate("/events");
+            navigate("/");
             setFormData({
                 id: Date.now().toString(),
                 title: "",
