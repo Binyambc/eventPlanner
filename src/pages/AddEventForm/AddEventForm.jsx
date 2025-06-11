@@ -78,7 +78,7 @@ const AddEventForm = ({ onAddEvent }) => {
         console.log("Selected category:", category);
 
         axios
-        .post("https://eventplannerbackend-xrkp.onrender.com", newEvent)
+        .post("https://eventplannerbackend-xrkp.onrender.com/events", newEvent)
         .then((res) => {
             onAddEvent(res.data);
             navigate("/");
