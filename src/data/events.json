@@ -11,7 +11,9 @@
       "end": "2025-07-10T17:00",
       "lat": "60.197873",
       "lng": "24.9322653",
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "",
+      "color": "#680af5"
     },
     {
       "id": "2",
@@ -19,11 +21,13 @@
       "category": "concert",
       "location": "aura riverside park, läntinen rantakatu 25, turku, finland",
       "description": "open-air jazz performance by local and international artists.",
-      "start": "2025-06-02T19:00",
-      "end": "2025-07-12T22:00",
-      "lat": 60.45,
-      "lng": 22.2667,
-      "isFavorite": false
+      "start": "2025-06-14T07:00",
+      "end": "2025-07-14T15:00",
+      "lat": "60.447546",
+      "lng": "22.263063",
+      "isFavorite": false,
+      "emoji": "🍜",
+      "color": "#d63a1f"
     },
     {
       "id": "3",
@@ -36,7 +40,9 @@
       "end": "2025-07-15T17:00",
       "lat": 60.184,
       "lng": 24.8301,
-      "isFavorite": true
+      "isFavorite": true,
+      "emoji": "",
+      "color": "#F59E0B"
     },
     {
       "id": "4",
@@ -49,7 +55,9 @@
       "end": "2025-07-05T09:30",
       "lat": 61.067952,
       "lng": 28.183197,
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "🎸",
+      "color": "#8B5CF6"
     },
     {
       "id": "5",
@@ -61,7 +69,9 @@
       "end": "2025-07-09T18:00",
       "lat": 61.4982,
       "lng": 23.7608,
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "🌺",
+      "color": "#166534"
     },
     {
       "id": "6",
@@ -73,7 +83,9 @@
       "end": "2025-07-16T21:00",
       "lat": 65.014142,
       "lng": 25.470536,
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "",
+      "color": "#8B5CF6"
     },
     {
       "id": "7",
@@ -85,7 +97,9 @@
       "end": "2025-07-08T16:00",
       "lat": 60.183592,
       "lng": 24.953634,
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "🎞",
+      "color": "#EC4899"
     },
     {
       "id": "8",
@@ -97,7 +111,9 @@
       "end": "2025-07-11T22:00",
       "lat": 62.2415,
       "lng": 25.7209,
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "🥗",
+      "color": "#EF4444"
     },
     {
       "id": "9",
@@ -109,7 +125,9 @@
       "end": "2025-07-14T20:00",
       "lat": "60.1686",
       "lng": "24.9221",
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "🧘‍♀️",
+      "color": "#6366F1"
     },
     {
       "id": "10",
@@ -121,7 +139,9 @@
       "end": "2025-07-13T16:00",
       "lat": "62.892191",
       "lng": "27.687141",
-      "isFavorite": true
+      "isFavorite": true,
+      "emoji": "🎮",
+      "color": "#F97316"
     },
     {
       "id": "1749078491913",
@@ -133,7 +153,9 @@
       "description": "ererrer",
       "lat": "60.1938285",
       "lng": "24.9591511",
-      "isFavorite": false
+      "isFavorite": false,
+      "emoji": "",
+      "color": "#F97316"
     }
   ]
 }

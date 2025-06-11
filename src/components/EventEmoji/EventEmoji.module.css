@@ -1,15 +1,17 @@
 .emojiContainer {
   position: relative;
   display: inline-block;
+  font-size: 1rem;
 }
 .default {
   color: inherit;
   width: 2rem;
   height: 2rem;
   opacity: 0.5;
-  background: var(--body-background);
+  background: white;
   border-radius: 50%;
-  font-size: 1.25rem;
+  border: none;
+  font-size: inherit;
   transition: opacity 0.3s;
   box-shadow: 0 0 0.2rem #c3c2c2;
 }
@@ -24,7 +26,8 @@
   position: absolute;
   top: 0;
   left: -12.5rem;
-  background: var(--body-background);
+  background: white;
+  border: none;
   border-radius: 0.5rem;
   box-shadow: 0 0 0.2rem #8c8c8c;
   z-index: 10;
@@ -42,7 +45,8 @@
 .cat {
   opacity: 0.5;
   background: transparent;
-  font-size: 1.25rem;
+  border: none;
+  font-size: inherit;
   padding: 0.3rem;
   transition: opacity 0.3 ease;
 }
@@ -57,10 +61,11 @@
 }
 .emoji {
   color: inherit;
-  font-size: 1.25rem;
+  font-size: inherit;
   padding: 0.3rem;
   transition: boxShadow 0.3s;
   border-radius: 50%;
+  border: none;
   background: transparent;
   transition: boxShadow 0.3s;
 }
@@ -74,6 +79,7 @@
   margin: auto;
   width: 100%;
   margin: 0.5rem;
+  border: none;
 }
 .noEmoji:hover {
   text-shadow: 0 0 0.5rem #979696;

@@ -70,7 +70,7 @@ const EventCalendar = ({
     return {
       style: {
         backgroundColor: `${event.color}80`,
-        color: "var(--text-color)",
+        color: "#000",
       },
     };
   };
