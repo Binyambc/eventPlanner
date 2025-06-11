@@ -88,12 +88,17 @@ const EventCard = ({
   };
 
   const handleDelete = async () => {
-    await deleteEvent(id);
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this card?"
+    );
+    if (confirmed) {
+      await deleteEvent(id);
+      handleMessage("Deleted successfully!");
+    }
     if (deleteError) {
       handleMessage(deleteError.message);
       return;
     }
-    handleMessage("Deleted successfully!");
   };
 
   return (
