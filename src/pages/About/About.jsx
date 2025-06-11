@@ -16,24 +16,24 @@ const About = () => {
 
             <section className={styles.aboutSection}>
                 <h2>Key Features</h2>
-                <ul>
-                    <li>📅 Interactive Calendar View - Visualize all your events in a monthly calendar format</li>
-                    <li>🗺️ Map Integration - View event locations on an interactive map</li>
-                    <li>📝 Event Creation - Easily add new events with detailed information</li>
-                    <li>📋 Event List - Get a comprehensive list view of all your events</li>
-                    <li>🔍 Search and Filter - Quickly find specific events using our search functionality</li>
-                </ul>
+
+                <p><b> 📅 Interactive Calendar View </b>- Visualize all your events in a monthly calendar format</p>
+                <p><b>🗺️ Map Integration </b> - View event locations on an interactive map </p>
+                <p><b>📝 Event Creation </b> - Easily add new events with detailed information </p>
+                <p><b>📋 Event List </b> - Get a comprehensive list view of all your events </p>
+                <p><b>🔍 Search and Filter </b> - Quickly find specific events using our search functionality </p>
+
             </section>
 
             <section className={styles.aboutSection}>
                 <h2>How to Use</h2>
-                <ol>
-                    <li>Navigate to the Calendar or List view to see your events</li>
-                    <li>Use the "Add Event" button to create new events</li>
-                    <li>Fill in event details including title, date, time, and location</li>
-                    <li>View your events on the map to see their geographical distribution</li>
-                    <li>Manage and update your events as needed</li>
-                </ol>
+                <p>Navigate to the Calendar or List view to see your events</p>
+                <p>Use the "Add Event" button to create new events</p>
+                <p>Fill in event details including title, date, time, and location</p>
+                <p>View your events on the map to see their geographical distribution</p>
+                <p>Manage and update your events as needed</p>
+
+
             </section>
 
             <section className={styles.aboutSection}>
@@ -41,10 +41,19 @@ const About = () => {
                 <div className={styles.teamMembers}>
                     <div className={styles.teamMember}>
                         <h3>Developers</h3>
-                        <p>Binyam</p>
-                        <p>Hoa</p>
-                        <p>Abdul</p>
-                        <p>Makar</p>
+                        <p>
+                            <a href="https://github.com/Binyambc" target="_blank" rel="noopener noreferrer">Binyam</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/Hoa28686" target="_blank" rel="noopener noreferrer">Hoa</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/Abdul734734" target="_blank" rel="noopener noreferrer">Abdul</a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/makarpatapau" target="_blank" rel="noopener noreferrer">Makar</a>
+                        </p>
+
                     </div>
                 </div>
             </section>
@@ -53,7 +62,7 @@ const About = () => {
                 <h2>Contact</h2>
                 <p>
                     Have questions or suggestions? We'd love to hear from you!
-                    Please reach out to us through our contact form or email.
+                    Please reach out to us through our github profiles mention above.
                 </p>
             </section>
         </div>

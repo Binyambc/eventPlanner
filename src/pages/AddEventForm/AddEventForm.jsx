@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { getCoordinates, getNowDateTimeLocal } from "../../utils";
+import CategorySelect from "../../components/Category/Category";
 import styles from "./AddEventForm.module.css";
 import EventEmoji from "../../components/EventEmoji/EventEmoji";
 const AddEventForm = ({ onAddEvent }) => {
   const [formData, setFormData] = useState({
-    id: Date.now(),
+    id: Date.now().toString(),
     title: "",
     category: "",
     location: "",
@@ -71,17 +72,21 @@ const AddEventForm = ({ onAddEvent }) => {
 
     const newEvent = {
       ...formData,
-      latitude: coordinates.latitude,
-      longitude: coordinates.longitude,
+      id: Date.now().toString(),
+      lat: coordinates.latitude.toString(),
+      lng: coordinates.longitude.toString(),
+      isFavorite: false,
     };
 
+    console.log("Selected category:", category);
+
     axios
-      .post("http://localhost:3006/events", newEvent)
+      .post("https://eventplannerbackend-xrkp.onrender.com/events", newEvent)
       .then((res) => {
         onAddEvent(res.data);
         navigate("/");
         setFormData({
-          id: Date.now(),
+          id: Date.now().toString(),
           title: "",
           category: "",
           location: "",
@@ -103,16 +108,32 @@ const AddEventForm = ({ onAddEvent }) => {
       <div className={styles.formWrapper}>
         <h1 className={styles.heading}>Add new Event</h1>
         <form onSubmit={handleSubmit} className={styles.eventForm}>
+          <label className={styles.label} htmlFor="category">
+            Category
+          </label>
+          <CategorySelect
+            type="text"
+            placeholder="Category"
+            value={formData.category}
+            onChange={(cat) =>
+              setFormData((prev) => ({ ...prev, category: cat }))
+            }
+            name="category"
+            id="category"
+            className={styles.inputField}
+            required
+          />
           <label className={styles.label} htmlFor="title">
             Title
           </label>
+
           <div className={`${styles.inputField} ${styles.titleContainer}`}>
             <input
-              type="text"
               placeholder="Event title"
+              type="text"
+              name="title"
               value={formData.title}
               onChange={handleChange}
-              name="title"
               className={styles.title}
               required
             />
@@ -131,19 +152,6 @@ const AddEventForm = ({ onAddEvent }) => {
               />
             </div>
           </div>
-
-          <label className={styles.label} htmlFor="category">
-            Category
-          </label>
-          <input
-            type="text"
-            placeholder="Category"
-            value={formData.category}
-            onChange={handleChange}
-            name="category"
-            className={styles.inputField}
-            required
-          />
           <label className={styles.label} htmlFor="location">
             Location
           </label>
@@ -193,6 +201,7 @@ const AddEventForm = ({ onAddEvent }) => {
             name="image"
             className={styles.inputField}
           />
+
           <label className={styles.label} htmlFor="description">
             Description
           </label>

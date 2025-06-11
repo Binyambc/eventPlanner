@@ -48,6 +48,8 @@ h3 {
   background: inherit;
   color: inherit;
   width: 100%;
+  outline: none;
+  border: none;
 }
 .eventColor {
   display: inline-block;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { Menu, X } from "lucide-react";
@@ -6,6 +6,12 @@ import { Menu, X } from "lucide-react";
 const Header = ({ logo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
+
+  const [isDark, setIsDark] = useState("false");
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   return (
     <header className={styles.header}>
@@ -25,6 +31,7 @@ const Header = ({ logo }) => {
 
       <nav className={`${styles.nav} ${menuOpen ? styles.show : ""}`}>
         <ul className={styles.navList}>
+          <button onClick={() => setIsDark((prev) => !prev)}>Switch to {isDark ? "Light" : "Dark"} Mode </button>
           <li>
             <NavLink to="/" className={styles.navLink}>
               Events

@@ -3,27 +3,21 @@ import useAxios from "../../hooks/useAxios";
 import styles from "./EventCard.module.css";
 
 const Weather = ({ geo }) => {
-  const [weather, setWeather] = useState({});
+  const [weather, setWeather] = useState(null);
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${geo[0]}&lon=${geo[1]}&appid=${apiKey}`;
-  const { get, loading } = useAxios();
-
-  // console.log("API KEY:", import.meta.env.VITE_WEATHER_API_KEY);
+  const { get, loading, error } = useAxios();
 
   useEffect(() => {
-    if (!apiKey) {
-      console.error("Weather API key is missing.");
-      return;
-    }
     if (geo.length === 2) {
       const fetchWeather = async () => {
         const weatherData = await get(apiUrl);
         setWeather(weatherData);
-        // console.log(weatherData);
       };
       fetchWeather();
     }
   }, [geo]);
+  if (error) return <p>{error.message}</p>;
   if (loading || !weather.weather || !weather.main)
     return <p>Loading weather forecast.....</p>;
   return (

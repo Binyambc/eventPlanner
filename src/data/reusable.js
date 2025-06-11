@@ -30,8 +30,6 @@ export const geoConvert = async (location) => {
     const apiUrl = `https://us1.locationiq.com/v1/search?key=${apiKey}&q=${location}&format=json&limit=1`;
     const res = await axios.get(apiUrl);
     const data = res.data;
-    console.log(data);
-
     const lat = data[0].lat;
     const lng = data[0].lon;
     return { lat, lng, geoError: null };
