@@ -95,14 +95,16 @@ const EventCard = ({
 
   return (
     <div className={styles.eventCard}>
-      {image && (
-        <img
-          loading="lazy"
-          src={image}
-          alt="event image"
-          className={styles.eventImage}
-        />
-      )}
+      <img
+        loading="lazy"
+        src={image || "/images/placeHolder.webp"}
+        alt="event image"
+        className={styles.eventImage}
+        onError={(e) => {
+          e.target.onerror = null;
+          e.target.src = "/images/placeHolder.webp";
+        }}
+      />
       {Editing ? (
         <form onSubmit={handleSubmit} className={styles.editForm}>
           <input

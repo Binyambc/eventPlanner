@@ -21,8 +21,8 @@
       "description": "open-air jazz performance by local and international artists.",
       "start": "2025-06-02t19:00",
       "end": "2025-07-12t22:00",
-      "lat": 60.45,
-      "lng": 22.2667,
+      "lat": "60.45",
+      "lng": "22.2667",
       "isFavorite": true
     },
     {
@@ -34,8 +34,8 @@
       "description": "discussions on ai accountability, fairness, and law in the eu.",
       "start": "2025-07-15t13:30",
       "end": "2025-07-15t17:00",
-      "lat": 60.184,
-      "lng": 24.8301,
+      "lat": "60.184",
+      "lng": "24.8301",
       "isFavorite": true
     },
     {
@@ -47,8 +47,8 @@
       "description": "lakeside yoga with peaceful scenery and fresh air.",
       "start": "2025-07-05t08:00",
       "end": "2025-07-05t09:30",
-      "lat": 61.067952,
-      "lng": 28.183197,
+      "lat": "61.067952",
+      "lng": "28.183197",
       "isFavorite": false
     },
     {
@@ -59,9 +59,9 @@
       "description": "celebrating local farmers, food trucks, and finnish produce.",
       "start": "2025-07-09t11:00",
       "end": "2025-07-09t18:00",
-      "lat": 61.4982,
-      "lng": 23.7608,
-      "isFavorite": true
+      "lat": "61.4982",
+      "lng": "23.7608",
+      "isFavorite": false
     },
     {
       "id": "6",
@@ -71,9 +71,9 @@
       "description": "a cozy night of tabletop and party games at a community center.",
       "start": "2025-07-16t17:30",
       "end": "2025-07-16t21:00",
-      "lat": 65.014142,
-      "lng": 25.470536,
-      "isFavorite": true
+      "lat": "65.014142",
+      "lng": "25.470536",
+      "isFavorite": false
     },
     {
       "id": "7",
@@ -83,9 +83,9 @@
       "description": "explore helsinki’s urban art scene with a guided walk.",
       "start": "2025-07-08t14:00",
       "end": "2025-07-08t16:00",
-      "lat": 60.183592,
-      "lng": 24.953634,
-      "isFavorite": true
+      "lat": "60.183592",
+      "lng": "24.953634",
+      "isFavorite": false
     },
     {
       "id": "8",
@@ -95,8 +95,8 @@
       "description": "screening and discussion of new finnish indie films.",
       "start": "2025-07-11t19:00",
       "end": "2025-07-11t22:00",
-      "lat": 62.2415,
-      "lng": 25.7209,
+      "lat": "62.2415",
+      "lng": "25.7209",
       "isFavorite": false
     },
     {
@@ -112,18 +112,6 @@
       "isFavorite": false
     },
     {
-      "id": "10",
-      "title": "kids science expo",
-      "category": "wellness",
-      "location": "kuopio museum, kauppakatu 23, kuopio, finland",
-      "description": "interactive science event for kids with exhibits and workshops.",
-      "start": "2025-07-09t12:00",
-      "end": "2025-07-13t16:00",
-      "lat": "62.892191",
-      "lng": "27.687141",
-      "isFavorite": false
-    },
-    {
       "id": "1749078491913",
       "title": "picnic",
       "category": "leisure",
@@ -133,6 +121,84 @@
       "description": "ererrer",
       "lat": "60.1938285",
       "lng": "24.9591511",
+      "isFavorite": false
+    },
+    {
+      "id": "1749543224352",
+      "title": "Friendly Football",
+      "category": "Sports",
+      "location": "Mäkelänkatu 70, Helsinki, Finland",
+      "start": "2025-06-14T15:00",
+      "end": "2025-06-14T17:00",
+      "image": "",
+      "description": "Blue team vs Red team",
+      "lat": "60.2028129",
+      "lng": "24.9440035",
+      "isFavorite": false
+    },
+    {
+      "id": "1749543517083",
+      "title": "Friendly Football",
+      "category": "Sports",
+      "location": "Mäkelänkatu 70, Helsinki, Finland",
+      "start": "2025-06-14T15:00",
+      "end": "2025-06-14T17:00",
+      "image": "",
+      "description": "Blue team vs Red team",
+      "lat": "60.2028129",
+      "lng": "24.9440035",
+      "isFavorite": false
+    },
+    {
+      "id": "1749601992270",
+      "title": "Karting",
+      "category": "Sports",
+      "location": "Myllykyläntie 3, Vantaa, Finland",
+      "start": "2025-06-22T10:30",
+      "end": "2025-06-22T11:30",
+      "image": "https://depositphotos.com/editorial/kart-pilots-competing-16236155.html",
+      "description": "GoKart",
+      "lat": "60.3361069",
+      "lng": "24.9270404",
+      "isFavorite": false
+    },
+    {
+      "id": "1749626616445",
+      "title": "Cheese making",
+      "category": "Farming",
+      "location": "Malminkaari 24, Helsinki, Finland",
+      "start": "2025-06-14T07:00",
+      "end": "2025-06-14T10:20",
+      "image": "https://bowcockcuerden.co.uk/wp-content/uploads/2017/11/cow_in_field-1024x683-1024x585.jpg",
+      "description": "A day at the animal farm",
+      "lat": "60.2573175",
+      "lng": "25.0340346",
+      "isFavorite": false
+    },
+    {
+      "id": "1749630085336",
+      "title": "Spa",
+      "category": "Wellness",
+      "location": "Itäinen Brahenkatu 13, 00510 Helsinki",
+      "start": "2025-06-13T17:30",
+      "end": "2025-06-13T18:30",
+      "image": "",
+      "description": "Salt water floating tab",
+      "lat": "60.1898353",
+      "lng": "24.9496429",
+      "isFavorite": false
+    },
+    {
+      "id": "1749630216803",
+      "title": "Movie",
+      "category": "Film",
+      "location": "sydney, Helsinki",
+      "start": "2025-06-11T19:30",
+      "end": "2025-06-11T21:30",
+      "image": "https://media.finnkino.fi/Files/responsive/TietoaFinnkinosta_Imax_1920x810.jpg",
+      "description": "Movie night",
+      "lat": "60.20787",
+      "lng": "24.99935",
       "isFavorite": false
     }
   ]

@@ -23,6 +23,8 @@ function App() {
 
   const eventApi = "http://localhost:3006/events";
 
+  const [isDark, setIsDark] = useState("false");
+
   useEffect(() => {
     const fetchData = async () => {
       let data = await get(eventApi);
@@ -31,6 +33,10 @@ function App() {
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   const addEventHandler = (newEvent) => {
     setEventData((prev) => [...prev, newEvent]);
@@ -61,8 +67,10 @@ function App() {
       setCategories((prev) => [...prev, newCat]);
     }
   };
+  
   return (
     <>
+      <button onClick={() => setIsDark((prev) => !prev)}>Switch to {isDark ? "Light" : "Dark"} Mode </button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>

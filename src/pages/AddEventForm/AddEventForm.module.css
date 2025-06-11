@@ -36,7 +36,7 @@
     background-color: #fff;
     transition: border-color 0.2s ease;
   }
-
+  
   .inputField:focus,
   .textArea:focus {
     border-color: #dda15e;
