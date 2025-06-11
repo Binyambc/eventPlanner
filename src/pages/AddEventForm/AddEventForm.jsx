@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { getCoordinates, getNowDateTimeLocal } from "../../utils";
+import CategorySelect from "../../components/Category/Category";
 import styles from "./AddEventForm.module.css";
 
 const AddEventForm = ({ onAddEvent }) => {
     const [formData, setFormData] = useState({
-        id: Date.now(),
+        id: Date.now().toString(),
         title: "",
         category: "",
         location: "",
@@ -30,6 +31,8 @@ const AddEventForm = ({ onAddEvent }) => {
     //         .slice(0, 16);
     // };
     const nowMin = getNowDateTimeLocal();
+
+    const [category, setCategory] = useState("");
 
     const newImage = (
         <img 
@@ -68,9 +71,13 @@ const AddEventForm = ({ onAddEvent }) => {
         }
 
         const newEvent = { ...formData,
-            latitude: coordinates.latitude,
-            longitude: coordinates.longitude,
+            id: Date.now().toString(),
+            lat: coordinates.latitude.toString(),
+            lng: coordinates.longitude.toString(),
+            isFavorite: false,
         };
+
+        console.log("Selected category:", category);
 
         axios
         .post("http://localhost:3006/events", newEvent)
@@ -78,7 +85,7 @@ const AddEventForm = ({ onAddEvent }) => {
             onAddEvent(res.data);
             navigate("/events");
             setFormData({
-                id: Date.now(),
+                id: Date.now().toString(),
                 title: "",
                 category: "",
                 location: "",
@@ -99,6 +106,16 @@ const AddEventForm = ({ onAddEvent }) => {
             <h1 className={styles.heading}>Add new Event</h1>
             <form onSubmit={handleSubmit}
                 className={styles.eventForm}>
+                    <label className={styles.label} htmlFor="category" >Category</label>
+                    <CategorySelect type="text"
+                    placeholder="Category"
+                    value={formData.category}
+                    onChange={setCategory}
+                    name="category"
+                    id="category"
+                    className={styles.inputField}                   
+                    required 
+                    />
                     <label className={styles.label} htmlFor="title" >Title</label>
                     <input type="text"
                     placeholder="Event title"
@@ -106,15 +123,6 @@ const AddEventForm = ({ onAddEvent }) => {
                     onChange={handleChange}
                     name="title"
                     className={styles.inputField}
-                    required 
-                    />
-                    <label className={styles.label} htmlFor="category" >Category</label>
-                    <input type="text"
-                    placeholder="Category"
-                    value={formData.category}
-                    onChange={handleChange}
-                    name="category"
-                    className={styles.inputField}                   
                     required 
                     />
                     <label className={styles.label} htmlFor="location" >Location</label>
@@ -154,6 +162,7 @@ const AddEventForm = ({ onAddEvent }) => {
                     name="image"
                     className={styles.inputField}
                     />
+                    
                     <label className={styles.label} htmlFor="description" >Description</label>
                     <textarea type="text"
                     placeholder="Description"

@@ -23,7 +23,7 @@ function App() {
 
   const eventApi = "http://localhost:3006/events";
 
-  const [theme, setTheme] = useState("light");
+  const [isDark, setIsDark] = useState("false");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,10 +35,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-  
-  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
+    document.body.classList.toggle("dark", isDark);
+  }, [isDark]);
 
   const addEventHandler = (newEvent) => {
     setEventData((prev) => [...prev, newEvent]);
@@ -69,9 +67,10 @@ function App() {
       setCategories((prev) => [...prev, newCat]);
     }
   };
+  
   return (
     <>
-      <button onClick={toggleTheme} style={{margin: "10px"}}>Switch to {theme === "light" ? "dark" : "light"} Mode </button>
+      <button onClick={() => setIsDark((prev) => !prev)}>Switch to {isDark ? "Light" : "Dark"} Mode </button>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>

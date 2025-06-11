@@ -87,9 +87,10 @@
     align-items: center;
   }
   .listContainer {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
+    justify-content: center;
   }
   .success {
     width: fit-content;
@@ -102,5 +103,13 @@
   }
   h1 {
     font-size: 2.2rem;
+  }
+  .listContainer {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 900px;
+    max-width: 900px;
+    margin-inline: auto;
   }
 }

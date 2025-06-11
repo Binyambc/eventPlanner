@@ -2,17 +2,40 @@
   box-sizing: border-box;
 }
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Raleway, Avenir, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --bg-color: #fefae0;
+  --surface-color: #fff;
+  --text-color: #283618;
+  --accent-color: #bc6c25;
+  --accent-soft: #dda15e;
+  --border-color: #606c38;
+  --placeholder-color: #606c38;
+  --input-bg: #fff;
+  --success-bg: #dda15e;
+  --success-text: #283618;
 }
 
+.dark {
+  --bg-color: #1d1d1a;
+  --surface-color: #2e2e29;
+  --text-color: #fefae0;
+  --accent-color: #dda15e;
+  --accent-soft: #bc6c25;
+  --border-color: #fefae0;
+  --placeholder-color: #fefae088;
+  --input-bg: #3a3a34;
+  --success-bg: #606c38;
+  --success-text: #fefae0;
+}
 body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  transition: background-color 0.3 ease, color 0.3 ease; 
 }
 main {
   padding-top: 80px;
