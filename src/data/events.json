@@ -156,6 +156,20 @@
       "isFavorite": false,
       "emoji": "",
       "color": "#F97316"
+    },
+    {
+      "id": "1749674366515",
+      "title": "test1",
+      "category": "food",
+      "location": "Töölönlahdenkatu 4, Helsinki",
+      "start": "2025-06-17T23:41",
+      "end": "2025-06-18T00:41",
+      "image": "",
+      "description": "test emoji and color",
+      "color": "#ea2eb8",
+      "emoji": "🎁",
+      "lat": "60.1739403",
+      "lng": "24.9379816"
     }
   ]
 }

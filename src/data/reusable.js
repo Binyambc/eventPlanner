@@ -39,16 +39,3 @@ export const geoConvert = async (location) => {
     return { lat: null, lng: null, geoError: "No locations found." };
   }
 };
-
-export const categoryColors = {
-  conference: "#EF4444",
-  concert: "#0EA5E9",
-  seminar: "#10B981",
-  leisure: "#10B981",
-  community: "#F59E0B",
-  creation: "#8B5CF6",
-  film: "#166534",
-  art: "#EC4899",
-  wellness: "#6366F1",
-  business: "#F97316",
-};
