@@ -1,3 +1,65 @@
 # Finnish Event Planner App
 
-Team members: Binyam, Hoa, Abdul, Makar
+A modern web application for planning and managing events in Finland. This application helps users discover, create, and manage various events across the country.
+
+## 🚀 Features
+
+- Create and manage events
+- Browse upcoming events
+- Event categories and filtering
+- Responsive design for all devices
+- Interactive maps for event locations
+- Real-time updates
+
+## 🛠️ Tech Stack
+
+- React.js
+- Modern JavaScript (ES6+)
+
+## 📋 Prerequisites
+
+- Node.js
+- npm
+
+## 🔧 Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/eventPlanner.git
+cd eventPlanner
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start the development server
+
+```bash
+npm run dev
+```
+
+## 🏗️ Project Structure
+
+```
+eventPlanner/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── utils.js/
+│   └── App.js
+└── package.json
+```
+
+## 👥 Team Members
+
+- [Binyam](https://github.com/Binyambc)
+- [Hoa](https://github.com/Hoa28686)
+- [Abdul](https://github.com/Abdul734734)
+- [Makar](https://github.com/makarpatapau)
+
+For any questions or suggestions, please open an issue in the GitHub repository.
