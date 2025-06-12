@@ -30,25 +30,10 @@ export const geoConvert = async (location) => {
     const apiUrl = `https://us1.locationiq.com/v1/search?key=${apiKey}&q=${location}&format=json&limit=1`;
     const res = await axios.get(apiUrl);
     const data = res.data;
-    console.log(data);
-
     const lat = data[0].lat;
     const lng = data[0].lon;
     return { lat, lng, geoError: null };
   } catch (e) {
     return { lat: null, lng: null, geoError: "No locations found." };
   }
-};
-
-export const categoryColors = {
-  conference: "#EF4444",
-  concert: "#0EA5E9",
-  seminar: "#10B981",
-  leisure: "#10B981",
-  community: "#F59E0B",
-  creation: "#8B5CF6",
-  film: "#166534",
-  art: "#EC4899",
-  wellness: "#6366F1",
-  business: "#F97316",
 };

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { geoConvert, localTime, time } from "../../data/reusable";
 import styles from "./EventCard.module.css";
-import { Link } from "react-router";
 import _ from "lodash";
-
+import EventEmoji from "../EventEmoji/EventEmoji";
 import Weather from "./Weather";
 import MapView from "./MapView";
 import useCategory from "../../hooks/useCategory";
 const EventCard = ({
   id,
   title,
+  emoji,
+  color,
   category,
   start,
   end,
@@ -30,6 +31,8 @@ const EventCard = ({
   const [Editing, setEditing] = useState(false);
   const prevInfo = {
     title,
+    emoji,
+    color,
     category,
     start,
     end,
@@ -85,12 +88,17 @@ const EventCard = ({
   };
 
   const handleDelete = async () => {
-    await deleteEvent(id);
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this card?"
+    );
+    if (confirmed) {
+      await deleteEvent(id);
+      handleMessage("Deleted successfully!");
+    }
     if (deleteError) {
       handleMessage(deleteError.message);
       return;
     }
-    handleMessage("Deleted successfully!");
   };
 
   return (
@@ -107,14 +115,31 @@ const EventCard = ({
       />
       {Editing ? (
         <form onSubmit={handleSubmit} className={styles.editForm}>
-          <input
-            placeholder="Title"
-            type="text"
-            name="title"
-            value={newInfo.title}
-            onChange={handleChange}
-            className={styles.input}
-          />
+          <div className={`${styles.input} ${styles.titleContainer}`}>
+            <input
+              placeholder="Title"
+              type="text"
+              name="title"
+              value={newInfo.title}
+              onChange={handleChange}
+              className={styles.title}
+              required
+            />
+            <div className={styles.colorEmoji}>
+              <EventEmoji
+                name="emoji"
+                value={newInfo.emoji}
+                onChange={handleChange}
+              />
+              <input
+                type="color"
+                name="color"
+                value={newInfo.color}
+                onChange={handleChange}
+                className={styles.color}
+              />
+            </div>
+          </div>
 
           {addingCat ? (
             <>
@@ -232,7 +257,13 @@ const EventCard = ({
           <div className={styles.favorite} onClick={() => toggleFavorite(id)}>
             {isFavorite ? "💖" : "🤍"}
           </div>
-          <h3>{title}</h3>
+          <h3>
+            {title} {emoji}{" "}
+            <span
+              style={{ backgroundColor: color }}
+              className={styles.eventColor}
+            ></span>
+          </h3>
           <p className={styles.category}>{category}</p>
           <div className={styles.time}>
             <label className={styles.timeIcon}>🕐</label>

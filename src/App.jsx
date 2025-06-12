@@ -22,6 +22,7 @@ function App() {
   };
 
   const eventApi = "https://eventplannerbackend-xrkp.onrender.com/events";
+  // const eventApi = "http://localhost:3006/events";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,7 +62,7 @@ function App() {
       setCategories((prev) => [...prev, newCat]);
     }
   };
-  
+
   return (
     <>
       <BrowserRouter>
