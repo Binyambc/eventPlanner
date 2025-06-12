@@ -63,8 +63,7 @@ const About = () => {
               <strong>Binyam</strong>
             </p>
             <p>
-              <strong>Hoa</strong>: EventCard, EventList, Calendar, Weather, Map
-              view, event emoji and color, and some styling
+              <strong>Hoa</strong>
             </p>
             <p>
               <strong>Abdul</strong>
