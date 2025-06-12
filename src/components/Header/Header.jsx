@@ -17,7 +17,7 @@ const Header = ({ logo }) => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link to="/">
-          <img src="./images/logo_synergy.png" alt="logo" />
+          <img src="./images/logoSynergy.webp" alt="logo" />
         </Link>
       </div>
 
