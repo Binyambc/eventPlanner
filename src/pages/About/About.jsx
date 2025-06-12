@@ -83,8 +83,8 @@ const About = () => {
           reach out to us through our contact form or email.
         </p>
         <h2>GitHub Repos</h2>
-        <p>Frontend: https://github.com/Binyambc/eventPlanner.git</p>
-        <p>Backend: https://github.com/Binyambc/eventPlannerBackend.git</p>
+        <p>Frontend: <a href="https://github.com/Binyambc/eventPlanner.git"></a> </p>
+        <p>Backend: <a href="https://github.com/Binyambc/eventPlannerBackend.git"></a> </p>
       </section>
     </div>
   );
