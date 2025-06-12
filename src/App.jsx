@@ -8,6 +8,7 @@ import EventCalendar from "./pages/Calendar/Calendar";
 import useAxios from "./hooks/useAxios";
 import MapAll from "./pages/Map/MapAll";
 import AddEventForm from "./pages/AddEventForm/AddEventForm";
+import { useTheme } from "./contexts/ThemeContext";
 
 function App() {
   const [eventData, setEventData] = useState([]);
@@ -15,7 +16,7 @@ function App() {
   const { get, patch, loading, error } = useAxios();
   const { remove, error: deleteError } = useAxios();
   const [message, setMessage] = useState("");
-
+  const { isDarkMode, toggleTheme } = useTheme();
   const handleMessage = (msg) => {
     setMessage(msg);
     setTimeout(() => setMessage(""), 2000);
@@ -31,18 +32,23 @@ function App() {
       setEventData(data);
     };
     fetchData();
-  }, []);
+    }, []);
 
-  const addEventHandler = (newEvent) => {
-    setEventData((prev) => [...prev, newEvent]);
-  };
+    const addEventHandler = (newEvent) => {
+      setEventData((prev) => [...prev, newEvent]);
+    };
 
-  const handleInfoChange = async (id, newInfo) => {
-    const updatedInfo = await patch(eventApi, id, newInfo);
-    setEventData((prev) =>
-      prev.map((event) => (event.id === id ? updatedInfo : event))
-    );
-  };
+    const handleInfoChange = async (id, newInfo) => {
+      const updatedInfo = await patch(eventApi, id, newInfo);
+      setEventData((prev) =>
+        prev.map((event) => (event.id === id ? updatedInfo : event))
+      );
+    };
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+  }, [isDarkMode]);
 
   const deleteEvent = async (id) => {
     await remove(eventApi, id);
@@ -65,6 +71,12 @@ function App() {
 
   return (
     <>
+      <div className={isDarkMode ? "dark" : ""}>
+        <header className="navbar">
+          <button className="theme-toggle" onClick={toggleTheme}>
+            {isDarkMode ? "🌙 " : "☀️ "}
+          </button>
+        </header>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>
@@ -111,6 +123,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      </div>
     </>
   );
 }

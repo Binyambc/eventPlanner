@@ -2,15 +2,10 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import { Menu, X } from "lucide-react";
-import { IconButton } from "@mui/material";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const Header = ({ logo }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen((prev) => !prev);
-
-  const [isDark, setIsDark] = useState(false);
   
   const handleCloseMenu = () => setMenuOpen(false);
   return (
@@ -55,24 +50,6 @@ const Header = ({ logo }) => {
             <NavLink to="/add-event" className={styles.navLink} onClick={handleCloseMenu} >
               Add new event
             </NavLink>
-          </li>
-          <li className={styles.navItem}>
-            <IconButton
-              onClick={() => setIsDark((prev) => !prev)}
-              sx={{
-                color: isDark ? "#fefae0" : "#283618",
-                backgroundColor: isDark ? "#283618" : "#dda15e",
-                borderRadius: "8px",
-                padding: "0.35rem",
-                transition: "all 0.3s ease",
-                '&:hover': {
-                  backgroundColor: isDark ? "#bc6c25" : "#bc6c25",
-                  color: "#fff",
-                },
-              }}
-              >
-              {isDark ? <DarkModeIcon /> : <Brightness7Icon />}
-            </IconButton>
           </li>
         </ul>
       </nav>

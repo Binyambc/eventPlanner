@@ -17,10 +17,12 @@ const MapAll = ({ eventData }) => {
     popupAnchor: [0, -30],
   });
   if (!eventData || eventData.length === 0) {
-    return <p class={styles.loading}>Loading map.....</p>;
+    return <p className={styles.loading}>Loading map.....</p>;
   }
   const geo = [eventData[0].lat, eventData[0].lng];
   return (
+    <>
+    <div className={styles.mapWrapper} >
     <MapContainer center={geo} zoom={13} className={styles.mapView}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {eventData.map((event) => (
@@ -37,6 +39,8 @@ const MapAll = ({ eventData }) => {
         </Marker>
       ))}
     </MapContainer>
+    </div>
+    </>
   );
 };
 

@@ -3,8 +3,15 @@
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
+  --background: #d7d3bb;
+  --text: #000;
 }
-
+.dark {
+  --background: #121212;
+  --text: #eee;
+  --background: #121212;
+  --text: #eee;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -13,4 +20,25 @@
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  margin-left: -15px;
+}
+.theme-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  color: inherit;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.theme-toggle:hover {
+  background-color: rgba(0,0,0,0.1);
 }
