@@ -1,15 +1,18 @@
 .mapContainer {
-    margin: 1rem auto;
-    max-width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    height: 50vh;
-    min-height: 300px;
-  }
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 50vh;
+  min-height: 300px;
+}
   
 .leaflet-popup-content-wrapper {
-    background-color: #fefae0;
-    color: #283618;
-    font-family: sans-serif;
-  }
+  background-color: var(--map-popup-bg);
+  color: var(--map-popup-text);
+}
+.leaflet-popup-tip {
+  background-color: var(--map-popup-bg);
+}

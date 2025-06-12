@@ -46,12 +46,12 @@ const EventList = ({
   return (
     <>
       <section className={styles.heroSection}>
-        <video autoPlay muted loop playsInline className={styles.heroVideo}>
-          <source src="/videos/yard.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className={styles.videoOverlay}></div>
 
+        <div className={styles.heroImage}>
+          <img src="/images/background.webp" type="image" alt="background image" />
+          </div>
+          <div className={styles.imageOverlay}>
+          </div>
         <div className={`${styles.overlayContent}`}>
           <div className={styles.overlayBackground}>
             <h1>Discover Events</h1>

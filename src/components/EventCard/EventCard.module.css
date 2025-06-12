@@ -1,23 +1,22 @@
 .eventCard {
-  background-color: #fefae0;
-  border: 1px solid #dda15e;
+  background-color: var(--bg);
+  border: 1px solid var(--accent);
   border-radius: 1rem;
   padding: 1rem 1.5rem;
-  margin: 1rem auto;
+  margin: 0;
   box-shadow: 0 2px 6px rgba(40, 54, 24, 0.15);
   width: 100%;
-  margin: 0;
   max-width: none;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
   font-family: system-ui, sans-serif;
   position: relative;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .eventCard:hover {
-  box-shadow: 0 0.2rem 0.4rem #a5a5a5;
+  box-shadow: 0 0.2rem 0.4rem var(--placeholder-color);
 }
 
 .eventImage {
@@ -28,8 +27,47 @@
   margin-bottom: 0.5rem;
 }
 
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.eventColor {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  margin-left: 0.25rem;
+}
+
+.colorEmoji {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+.color {
+  width: 1.5rem;
+  height: 1.7rem;
+  border-radius: 0.5rem;
+  background: none;
+  padding: 0;
+  box-shadow: 0 0 0.2rem var(--placeholder-color);
+}
+
 h3 {
-  color: #283618;
+  color: var(--text);
   margin: 0 0 0.15rem 0;
   font-size: 1.1rem;
   text-align: left;
@@ -69,8 +107,8 @@ h3 {
   box-shadow: 0 0 0.2rem #afafaf;
 }
 .favorite {
-  background: var(--body-background);
-  text-shadow: 0 0.1rem 0.3rem #a5a5a5;
+  background: var(--bg);
+  text-shadow: 0 0.1rem 0.3rem var(--placeholder-color);
   border-radius: 0 0 0 2rem;
   font-size: 1.3rem;
   position: absolute;
@@ -78,11 +116,12 @@ h3 {
   right: 0;
   cursor: pointer;
   padding: 0.3rem 0.5rem;
+  color: var(--text);
 }
 
 .category {
   font-size: 0.75rem;
-  color: grey;
+  color: var(--muted-text);
   margin: 0 0 0.15rem 0;
   text-align: left;
   line-height: 0.5;
@@ -125,11 +164,11 @@ h3 {
 .textArea {
   width: 100%;
   padding: 0.6rem;
-  border: 1px solid #bc6c25;
+  border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 0.95rem;
-  background-color: #fff;
-  color: #283618;
+  background-color: var(--input-bg);
+  color: var(--text);
   margin-bottom: 0.75rem;
 }
 
@@ -145,7 +184,7 @@ h3 {
 
 .button {
   background-color: #606c38;
-  color: #fefae0;
+  color: var(--bg);
   padding: 0.3rem 0.7rem;
   border: none;
   border-radius: 0.4rem;
@@ -175,17 +214,9 @@ h3 {
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  color: #283618;
+  color: var(--text);
   font-size: 0.9rem;
   margin: 0 0 0.1rem 0;
-}
-
-.eventColor {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  margin-left: 0.25rem;
 }
 
 .eventCardFooter {
@@ -197,9 +228,10 @@ h3 {
 }
 
 .cardFooterBorder {
-  border-top: 1px solid #dda15e;
+  border-top: 1px solid var(--accent);
   margin-top: 0.5rem;
 }
+
 .weatherContainer {
   display: flex;
   flex-direction: row;
@@ -207,7 +239,9 @@ h3 {
   align-items: center;
   margin-bottom: 0.15rem;
   flex-wrap: nowrap;
+  color: var(--text);
 }
+
 .mapView {
   margin: 0.75rem 0;
   height: 15rem;
