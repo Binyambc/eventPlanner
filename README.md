@@ -57,7 +57,7 @@ eventPlanner/
 
 ## 👥 Team Members
 
-- [Binyam](https://github.com/Binyambc)
+- [Binyam](https://github.com/Binyambc): Worked on Style guide/theme, divided task amongst group, created the repositories and folder structure, created AddEvent, App routing and connections, styling(module.css/dark and light mode), held daily meetings.
 - [Hoa](https://github.com/Hoa28686): developed EventCard, EventList, Calendar, Weather, Map view, event emoji and color, and added some styling.
 - [Abdul](https://github.com/Abdul734734)
 - [Makar](https://github.com/makarpatapau)
