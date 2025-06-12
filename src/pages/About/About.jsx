@@ -40,11 +40,11 @@ const About = () => {
           <div className={styles.teamMember}>
             <h3>Developers</h3>
                 <p>
-                    <a href="https://github.com/Binyambc" target="_blank" rel="noopener noreferrer"><strong>Binyam: Worked on Style guide/theme, divided task amongst group, created the repositories and folder structure, created AddEvent, App routing and connections, styling(module.css/dark and light mode), held daily meetings.</strong></a>
+                    <a href="https://github.com/Binyambc" target="_blank" rel="noopener noreferrer"><strong>Binyam</strong></a>: Worked on Style guide/theme, divided task amongst group, created the repositories and folder structure, created AddEvent, App routing and connections, styling(module.css/dark and light mode), held daily meetings.
                 </p>
                 <p>
-                    <a href="https://github.com/Hoa28686" target="_blank" rel="noopener noreferrer"><strong>Hoa</strong>: EventCard, EventList, Calendar, Weather, Map
-                    view, event emoji and color, and some styling</a>
+                    <a href="https://github.com/Hoa28686" target="_blank" rel="noopener noreferrer"><strong>Hoa</strong></a>: EventCard, EventList, Calendar, Weather, Map
+                    view, event emoji and color, and some styling
                 </p>
                 <p>
                     <a href="https://github.com/Abdul734734" target="_blank" rel="noopener noreferrer"><strong>Abdul</strong></a>
