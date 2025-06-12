@@ -35,7 +35,39 @@ h3 {
   text-align: left;
   line-height: 0.5;
 }
-
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  background: inherit;
+  color: inherit;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.eventColor {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+}
+.colorEmoji {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  z-index: 10;
+}
+.color {
+  width: 1.5rem;
+  height: 1.7rem;
+  border-radius: 0.5rem;
+  background: none;
+  padding: 0;
+  box-shadow: 0 0 0.2rem #afafaf;
+}
 .favorite {
   background: var(--body-background);
   text-shadow: 0 0.1rem 0.3rem #a5a5a5;
