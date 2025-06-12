@@ -26,7 +26,7 @@
   color: #bc6c25;
   margin-bottom: 1rem;
   font-size: 1.4rem;
-  border-bottom: 2px solid #eee;
+  border-bottom: 1px solid #dda15e;
   padding-bottom: 0.5rem;
 }
 
@@ -46,14 +46,11 @@
   border: 1px solid #dda15e;
 }
 
-.teamMember:hover {
-  transform: translateY(-5px);
-}
-
 .teamMember h3 {
-  color: #606c38;
+  color: #dda15e;
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
+  text-align: center;
 }
 
 .teamMember p a {
