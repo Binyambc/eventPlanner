@@ -46,13 +46,7 @@ const EventList = ({
   return (
     <>
       <section className={styles.heroSection}>
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={styles.heroVideo}
-        >
+        <video autoPlay muted loop playsInline className={styles.heroVideo}>
           <source src="/videos/yard.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

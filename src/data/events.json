@@ -12,7 +12,7 @@
       "lat": "60.197873",
       "lng": "24.9322653",
       "isFavorite": false,
-      "emoji": "",
+      "emoji": "👨‍💻",
       "color": "#680af5"
     },
     {
@@ -20,13 +20,14 @@
       "title": "turku jazz evening",
       "category": "concert",
       "location": "aura riverside park, läntinen rantakatu 25, turku, finland",
+      "image": "https://img.freepik.com/free-photo/top-view-table-full-food_23-2149209253.jpg",
       "description": "open-air jazz performance by local and international artists.",
       "start": "2025-06-14T07:00",
       "end": "2025-07-14T15:00",
       "lat": "60.447546",
       "lng": "22.263063",
       "isFavorite": false,
-      "emoji": "🍜",
+      "emoji": "🎸",
       "color": "#d63a1f"
     },
     {
@@ -41,7 +42,7 @@
       "lat": 60.184,
       "lng": 24.8301,
       "isFavorite": true,
-      "emoji": "",
+      "emoji": "🧩",
       "color": "#F59E0B"
     },
     {
@@ -56,7 +57,7 @@
       "lat": 61.067952,
       "lng": 28.183197,
       "isFavorite": false,
-      "emoji": "🎸",
+      "emoji": "🧘",
       "color": "#8B5CF6"
     },
     {
@@ -84,7 +85,7 @@
       "lat": 65.014142,
       "lng": 25.470536,
       "isFavorite": false,
-      "emoji": "",
+      "emoji": "🎮",
       "color": "#8B5CF6"
     },
     {
@@ -126,7 +127,7 @@
       "lat": "60.1686",
       "lng": "24.9221",
       "isFavorite": false,
-      "emoji": "🧘‍♀️",
+      "emoji": "✨",
       "color": "#6366F1"
     },
     {
@@ -154,7 +155,7 @@
       "lat": "60.1938285",
       "lng": "24.9591511",
       "isFavorite": false,
-      "emoji": "",
+      "emoji": "🍣",
       "color": "#F97316"
     },
     {
