@@ -64,8 +64,11 @@ header {
   border-radius: 0.5rem;
   transition: background 0.3s;
 }
-
-
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .navLink:hover,
 .navLink.active {
   background-color: #dda15e;
