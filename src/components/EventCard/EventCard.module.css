@@ -122,7 +122,7 @@ h3 {
 
 .category {
   font-size: 0.75rem;
-  color: var(--muted-text);
+  color: var(--text);
   margin: 0 0 0.15rem 0;
   text-align: left;
   line-height: 0.5;
