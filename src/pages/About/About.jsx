@@ -63,8 +63,7 @@ const About = () => {
               <strong>Binyam</strong>
             </p>
             <p>
-              <strong>Hoa</strong>: EventCard, EventList, Calendar, Weather, Map
-              view, event emoji and color, and some styling
+              <strong>Hoa</strong>
             </p>
             <p>
               <strong>Abdul</strong>
@@ -83,8 +82,13 @@ const About = () => {
           reach out to us through our contact form or email.
         </p>
         <h2>GitHub Repos</h2>
-        <p>Frontend: <a href="https://github.com/Binyambc/eventPlanner.git"></a> </p>
-        <p>Backend: <a href="https://github.com/Binyambc/eventPlannerBackend.git"></a> </p>
+        <p>
+          Frontend: <a href="https://github.com/Binyambc/eventPlanner.git"></a>{" "}
+        </p>
+        <p>
+          Backend:{" "}
+          <a href="https://github.com/Binyambc/eventPlannerBackend.git"></a>{" "}
+        </p>
       </section>
     </div>
   );
