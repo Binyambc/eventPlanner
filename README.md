@@ -58,7 +58,7 @@ eventPlanner/
 ## 👥 Team Members
 
 - [Binyam](https://github.com/Binyambc)
-- [Hoa](https://github.com/Hoa28686)
+- [Hoa](https://github.com/Hoa28686): developed EventCard, EventList, Calendar, Weather, Map view, event emoji and color, and added some styling.
 - [Abdul](https://github.com/Abdul734734)
 - [Makar](https://github.com/makarpatapau)
 
