@@ -93,6 +93,7 @@
   color: #283618;
   font-size: 1rem;
   width: 100%;
+  text-transform: capitalize;
 }
 .favFilter {
   display: flex;
