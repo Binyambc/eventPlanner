@@ -26,7 +26,7 @@ A modern web application for planning and managing events in Finland. This appli
 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/eventPlanner.git
+git clone https://github.com/Binyambc/eventPlanner.git
 cd eventPlanner
 ```
 
@@ -63,3 +63,5 @@ eventPlanner/
 - [Makar](https://github.com/makarpatapau)
 
 For any questions or suggestions, please open an issue in the GitHub repository.
+
+https://github.com/Binyambc/eventPlanner
