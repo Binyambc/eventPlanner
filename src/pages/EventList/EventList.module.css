@@ -24,7 +24,7 @@
   width: 90%;
   font-weight: bold;
 }
-.heroVideo {
+.heroImage {
   position: absolute;
   top: 60px;
   left: 0;
@@ -32,8 +32,9 @@
   height: auto;
   object-fit: cover;
   z-index: -2;
+  overflow: hidden;
 }
-.videoOverlay {
+.imageOverlay {
   position: fixed;
   top: 0;
   left: 0;
