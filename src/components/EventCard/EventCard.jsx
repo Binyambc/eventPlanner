@@ -273,8 +273,9 @@ const EventCard = ({
             <label className={styles.locationIcon}>📍</label>
             <p>{location}</p>
           </div>
-
+          <div className={styles.weatherContainer}>
           <Weather geo={geo} />
+          </div>
           <div className={styles.cardFooterBorder}></div>
           {showDetail ? (
             <>
