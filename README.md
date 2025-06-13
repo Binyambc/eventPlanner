@@ -59,7 +59,7 @@ eventPlanner/
 
 - [Binyam](https://github.com/Binyambc): Worked on Style guide/theme, divided task amongst group, created the repositories and folder structure, created AddEvent, App routing and connections, styling(module.css/dark and light mode), held daily meetings.
 - [Hoa](https://github.com/Hoa28686): developed EventCard, EventList, Calendar, Weather, Map view, event emoji and color, and added some styling.
-- [Abdul](https://github.com/Abdul734734)
+- [Abdul](https://github.com/Abdul734734):Worked on about page, styling (module.css), worked on header and footer, write readme.
 - [Makar](https://github.com/makarpatapau)
 
 For any questions or suggestions, please open an issue in the GitHub repository.
