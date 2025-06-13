@@ -47,7 +47,7 @@ const About = () => {
               view, event emoji and color, and some styling
             </p>
             <p>
-              <a href="https://github.com/Abdul734734" target="_blank" rel="noopener noreferrer"><strong>Abdul</strong></a>: Worked on about page, styling (module.css), worked on header and footer, write readme
+              <a href="https://github.com/Abdul734734" target="_blank" rel="noopener noreferrer"><strong>Abdul</strong></a>:Worked on About.jsx, About.module.css and wrote readme
             </p>
             <p>
               <a href="https://github.com/makarpatapau" target="_blank" rel="noopener noreferrer"><strong>Makar</strong></a>
